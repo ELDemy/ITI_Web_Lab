@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Details</title>
+
+        <link rel="stylesheet"
+            href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script
+            src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="contactDetails">
+
+            <div data-role="header">
+                <a href="#contactList" data-icon="back">Back</a>
+                <h1>Mona Abdo</h1>
+            </div>
+
+            <div data-role="content" style="text-align:center;">
+
+                <img src="avatar.png"
+                    alt="contact"
+                    class="contact-img"
+                    onerror="this.style.display='none'; document.getElementById('avatarPlaceholder').style.display='flex';">
+
+                <div style="text-align:center;">
+                    <div id="avatarPlaceholder" class="avatar-placeholder"
+                        style="display:none;">
+                        <span>👤</span>
+                    </div>
+                </div>
+                <br>
+
+                <!-- Contact info -->
+                <ul data-role="listview" data-inset="true"
+                    style="max-width:300px; margin:auto;">
+                    <li><span class="ui-icon-phone ui-btn-icon-left"></span>
+                        <strong>Phone:</strong> 0123456789</li>
+                    <li><span class="ui-icon-mail ui-btn-icon-left"></span>
+                        <strong>Email:</strong> mona@example.com</li>
+                    <li><span class="ui-icon-user ui-btn-icon-left"></span>
+                        <strong>Gender:</strong> Female</li>
+                </ul>
+
+                <br>
+
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="#deleteDialog" data-role="button"
+                        data-icon="delete">Delete</a>
+                    <a href="#editContact" data-role="button"
+                        data-icon="edit">Edit</a>
+                    <a href="tel:0123456789" data-role="button"
+                        data-icon="phone">Call</a>
+                </div>
+
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Contact List</h4>
+            </div>
+
+        </div>
+
+        <div data-role="page" id="deleteDialog" data-dialog="true">
+            <div data-role="header">
+                <h1>Delete Contact?</h1>
+            </div>
+
+            <div data-role="content" style="text-align:center;">
+                <p>Are you sure you want to delete this contact?</p>
+                <a href="#contactDetails" data-role="button">Cancel</a>
+                <a href="#" data-role="button" data-theme="b">Delete</a>
+            </div>
+        </div>
+
+    </body>
+</html>
