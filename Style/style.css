@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0px 50px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px;
+}
+
+h2 {
+  color: blue;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  margin: 0px;
+  color: #333;
+}
+
+p {
+  color: #666;
+  line-height: 1.6;
+  margin: 4px 0px;
+  margin-left: 16px;
+}
+
+li {
+  margin: 6px 0;
+  color: #666;
+}
+
+.topLi {
+  margin: 0px 0px;
+  padding-top: 0px;
+}
+
+.topLi > li { margin-bottom: 24px; }
+
+.headerInfo {
+  display: flex;
+  align-items: center;
+}
