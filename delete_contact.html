@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Contact Confirmation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacOSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: rgba(255, 255, 255, 0.08);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .dialog {
+            width: 100%;
+            max-width: 300px;
+            background: rgba(245, 241, 241, 0.348);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+            margin: 16px;
+        }
+
+        .message {
+            padding: 28px 24px 20px;
+            text-align: center;
+            font-size: 17px;
+            line-height: 1.4;
+            border-bottom: 1px solid #333;
+            color: #000000;          /* ← Changed to black */
+        }
+
+        .buttons {
+            display: flex;
+            height: 54px;
+        }
+
+        .btn {
+            flex: 1;
+            background: transparent;
+            border: none;
+            font-size: 17px;
+            font-weight: 500;
+            color: #0a84ff;
+            cursor: pointer;
+            transition: background 0.2s;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn:active {
+            background: #333;
+        }
+
+        .btn.cancel {
+            color: #0a84ff;
+        }
+
+        .btn.delete {
+            color: #ff3b30;
+            font-weight: 600;
+        }
+
+        .btn + .btn {
+            border-left: 1px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dialog">
+        <div class="message">
+            Delete Contact?
+        </div>
+
+        <div class="buttons">
+            <button class="btn cancel">Cancel</button>
+            <button class="btn delete">Delete</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
