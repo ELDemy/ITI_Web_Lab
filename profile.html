@@ -12,8 +12,8 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script
-            src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
+            src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+        </script>
         <script type="module" src="Scripts/profils.js"></script>
         <script type="module" src="Scripts/contact_model.js"></script>
     </head>
@@ -21,7 +21,7 @@
         <div data-role="page" id="profile">
 
             <div data-role="header">
-                <a href="contacts_list.html" data-icon="back">Back</a>
+                <a href="contacts_list.html" data-ajax="false" data-icon="back">Back</a>
                 <h1>Mona Abdo</h1>
             </div>
 
@@ -40,7 +40,6 @@
                 </div>
                 <br>
 
-                <!-- Contact info -->
                 <ul data-role="listview" data-inset="true"
                     style="max-width:300px; margin:auto;">
                     <ul data-role="listview" data-inset="true">
