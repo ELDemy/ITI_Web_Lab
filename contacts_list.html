@@ -1,0 +1,60 @@
+<!-- file name: contacts_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacts List</title>
+
+        <link rel="stylesheet"
+            href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script
+            src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <style>
+        /* Optional: nice spacing for list items */
+        .contact-list li {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+        <script type="module" src="Scripts/contacts_list.js"></script>
+    </head>
+    <body>
+
+        <!-- ================= Contacts List Page ================= -->
+        <div data-role="page" id="contactList">
+
+            <div data-role="header">
+                <h1>Contacts</h1>
+            </div>
+
+            <div data-role="content">
+
+                <div data-role="content"
+                    style="text-align:center; display:flex; justify-content:space-between; align-items:center; max-width:400px; margin:auto;">
+                    <input id="searchContacts" data-type="search"
+                        placeholder="Search contacts"
+                        style="flex:1; margin-right:5px;">
+                    <a href="#addContactPage" data-role="button"
+                        data-icon="plus" data-iconpos="notext">Add</a>
+                </div>
+
+                <!-- Contacts list -->
+                <ul data-role="listview" data-filter="true"
+                    data-input="#searchContacts"
+                    data-inset="true" class="contact-list">
+                </ul>
+
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Total Contacts: 3</h4>
+            </div>
+
+        </div>
+
+    </body>
+</html>

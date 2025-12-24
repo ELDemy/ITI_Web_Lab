@@ -1,3 +1,5 @@
+<!-- file name: profile.html -->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,12 +13,15 @@
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script
             src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <script type="module" src="Scripts/profils.js"></script>
+        <script type="module" src="Scripts/contact_model.js"></script>
     </head>
     <body>
-        <div data-role="page" id="contactDetails">
+        <div data-role="page" id="profile">
 
             <div data-role="header">
-                <a href="#contactList" data-icon="back">Back</a>
+                <a href="contacts_list.html" data-icon="back">Back</a>
                 <h1>Mona Abdo</h1>
             </div>
 
@@ -38,12 +43,14 @@
                 <!-- Contact info -->
                 <ul data-role="listview" data-inset="true"
                     style="max-width:300px; margin:auto;">
-                    <li><span class="ui-icon-phone ui-btn-icon-left"></span>
-                        <strong>Phone:</strong> 0123456789</li>
-                    <li><span class="ui-icon-mail ui-btn-icon-left"></span>
-                        <strong>Email:</strong> mona@example.com</li>
-                    <li><span class="ui-icon-user ui-btn-icon-left"></span>
-                        <strong>Gender:</strong> Female</li>
+                    <ul data-role="listview" data-inset="true">
+                        <li><strong>Phone:</strong> <span
+                                id="p-phone"></span></li>
+                        <li><strong>Email:</strong> <span
+                                id="p-email"></span></li>
+                        <li><strong>Gender:</strong> <span
+                                id="p-gender"></span></li>
+                    </ul>
                 </ul>
 
                 <br>
