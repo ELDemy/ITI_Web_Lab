@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Contact</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+            href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script
+            src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+        </script>
+        <script type="module" src="Scripts/add_contact.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="addContactPage">
+            <div data-role="header">
+                <a href="contacts_list.html" data-ajax="false" data-icon="back"
+                    id="backBtn">Back</a>
+                <h1 id="page-title">New Contact</h1>
+            </div>
+
+            <div data-role="content">
+                <form id="addContactForm">
+                    <label for="add-name">Name</label>
+                    <input type="text" id="add-name" name="name" required>
+
+                    <label for="add-phone">Phone</label>
+                    <input type="tel" id="add-phone" name="phone"
+                        placeholder="(202) 555-5555" required>
+
+                    <label for="add-email">email</label>
+                    <input type="email" id="add-email" name="email">
+
+                    <fieldset data-role="controlgroup" data-type="horizontal"
+                        data-mini="true">
+                        <legend>Gender:</legend>
+                        <input type="radio" name="gender" id="add-female"
+                            value="Female">
+                        <label for="add-female">female</label>
+                        <input type="radio" name="gender" id="add-male"
+                            value="Male" checked>
+                        <label for="add-male">male</label>
+                    </fieldset>
+
+                    <div data-role="controlgroup" data-type="horizontal"
+                        style="text-align:center; margin-top:20px;">
+                        <button type="submit" data-icon="check">Save</button>
+                        <a href="contacts_list.html" data-ajax="false"
+                            data-role="button" data-icon="forbidden"
+                            id="cancelBtn">Cancel</a>
+                    </div>
+                </form>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Contact List</h4>
+            </div>
+        </div>
+
+    </body>
+</html>
